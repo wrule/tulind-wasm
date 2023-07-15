@@ -68,6 +68,14 @@ void run_task(int task_index) {
 
 int main() {
   printf("你好，世界\n");
-  printf("%d\n", ti_indicators[0].inputs);
+  int task_index = new_task(72, 10, 0);
+  for (int i = 0; i < 10; ++i) {
+    inputs_number(task_index, i, 0, i);
+  }
+  options_number(task_index, 0, 2);
+  run_task(task_index);
+  for (int i = 0; i < 10; ++i) {
+    printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
+  }
   return 0;
 }
