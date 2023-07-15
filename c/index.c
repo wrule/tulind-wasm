@@ -8,6 +8,7 @@
 typedef struct {
   int indicator_index;
   int size;
+  int size_buffer;
   int inputs_offset;
   TI_REAL * * inputs;
   TI_REAL * * inputs_buffer;
@@ -22,7 +23,8 @@ int next_task = 0;
 
 int new_task(int indicator_index, int size, int input_offset) {
   task_list[next_task].indicator_index = indicator_index;
-  task_list[next_task].size = size;
+  task_list[next_task].size = size - input_offset;
+  task_list[next_task].size_buffer = size;
   task_list[next_task].inputs_offset = input_offset;
   ti_indicator_info indicator = ti_indicators[indicator_index];
   task_list[next_task].inputs_buffer = malloc(sizeof(TI_REAL *) * indicator.inputs);
