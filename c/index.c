@@ -15,9 +15,9 @@ typedef struct {
   int outputs_length;
   TI_REAL * * outputs;
   int status;
-} task;
+} Task;
 
-task task_list[TASK_MAX];
+Task task_list[TASK_MAX];
 int next_task = 0;
 
 int new_task(
@@ -58,11 +58,32 @@ void input_number(
   task_list[task_index].inputs[x][y] = number;
 }
 
+void run_task(int task_index) {
+  Task task = task_list[task_index];
+  ti_indicator_info indicator = ti_indicators[task.indicator];
+  indicator.indicator(task.size, (const TI_REAL * *)task.inputs, task.options, task.outputs);
+}
+
+void show_task_output(int task_index) {
+  Task task = task_list[task_index];
+}
+
+
 int main() {
   printf("你好，世界\n");
   printf("%d\n", new_task(0, 100, 1, 1, 1));
   printf("%d\n", new_task(0, 100, 1, 1, 1));
   printf("%d\n", new_task(0, 100, 1, 1, 1));
   printf("你好，鸡毛\n");
+  const ti_indicator_info * info = ti_indicators;
+  printf("%s\n", info[0].name);
+  /* The last item is all zeros, so loop until then. */
+  // int i = 0;
+  // while (info->name != 0) {
+  //   printf("Found %s %d\n", info->name, info->type);
+  //   i++;
+  //   ++info;
+  // }
+  // printf("%d\n", i);
   return 0;
 }
