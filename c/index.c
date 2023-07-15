@@ -68,7 +68,7 @@ void run_task(int task_index) {
 
 int main() {
   printf("你好，世界\n");
-  int task_index = new_task(72, 10, 0);
+  int task_index = new_task(72, 10, 2);
   for (int i = 0; i < 10; ++i) {
     inputs_number(task_index, i, 0, i);
   }
@@ -77,5 +77,6 @@ int main() {
   for (int i = 0; i < 10; ++i) {
     printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
   }
+  printf("%d\n", task_list[task_index].outputs_offset);
   return 0;
 }
