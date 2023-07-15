@@ -72,7 +72,7 @@ int main() {
   for (int i = 0; i < 10; ++i) {
     inputs_number(task_index, i, 0, i);
   }
-  options_number(task_index, 0, 2);
+  options_number(task_index, 0, 4);
   run_task(task_index);
   for (int i = 0; i < 10; ++i) {
     printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
