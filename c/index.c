@@ -14,7 +14,6 @@ typedef struct {
   TI_REAL * options;
   int outputs_length;
   TI_REAL * * outputs;
-  int status;
 } Task;
 
 Task task_list[TASK_MAX];
@@ -44,8 +43,6 @@ int new_task(
     task_list[next_task].outputs[i] = malloc(sizeof(TI_REAL) * size);
   }
 
-  task_list[next_task].status = 0;
-
   return next_task++;
 }
 
@@ -55,7 +52,7 @@ void inputs_number(
   int y,
   TI_REAL number
 ) {
-  task_list[task_index].inputs[x][y] = number;
+  task_list[task_index].inputs[y][x] = number;
 }
 
 void options_number(
@@ -71,7 +68,7 @@ TI_REAL outputs_number(
   int x,
   int y
 ) {
-  return task_list[task_index].inputs[x][y];
+  return task_list[task_index].outputs[y][x];
 }
 
 void run_task(int task_index) {
