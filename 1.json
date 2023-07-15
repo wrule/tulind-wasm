@@ -1142,4 +1142,5 @@
 		"input_names": ["real"],
 		"option_names": ["period"],
 		"output_names": ["zlema"]
-	}]
+	}
+]

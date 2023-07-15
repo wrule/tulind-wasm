@@ -7,7 +7,7 @@ void print_string_list(const char * const list[TI_MAXINDPARAMS], int size) {
   int first = 1;
   printf("[");
   for (int i = 0; i < size; ++i) {
-    if (first == 0) printf(",");
+    if (first == 0) printf(", ");
     first = 0;
     printf("\"%s\"", list[i]);
   }
