@@ -44,6 +44,20 @@ int new_task(int indicator_index, int size, int input_offset) {
   return next_task++;
 }
 
+void free_task(int task_index) {
+  Task * task = &task_list[task_index];
+  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
+  for (int i = 0; i < indicator->inputs; ++i) {
+    free(task->inputs[i]);
+  }
+  free(task->inputs);
+  free(task->options);
+  for (int i = 0; i < indicator->outputs; ++i) {
+    free(task->outputs[i]);
+  }
+  free(task->outputs);
+}
+
 void inputs_number(int task_index, int x, int y, TI_REAL number) {
   task_list[task_index].inputs[y][x] = number;
 }
