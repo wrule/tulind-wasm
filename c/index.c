@@ -32,28 +32,15 @@ int new_task(int indicator_index, int size) {
   return next_task++;
 }
 
-void inputs_number(
-  int task_index,
-  int x,
-  int y,
-  TI_REAL number
-) {
+void inputs_number(int task_index, int x, int y, TI_REAL number) {
   task_list[task_index].inputs[y][x] = number;
 }
 
-void options_number(
-  int task_index,
-  int x,
-  TI_REAL number
-) {
+void options_number(int task_index, int x, TI_REAL number) {
   task_list[task_index].options[x] = number;
 }
 
-TI_REAL outputs_number(
-  int task_index,
-  int x,
-  int y
-) {
+TI_REAL outputs_number(int task_index, int x, int y) {
   return task_list[task_index].outputs[y][x];
 }
 
