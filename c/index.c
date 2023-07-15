@@ -49,6 +49,15 @@ int new_task(
   return next_task++;
 }
 
+void input_number(
+  int task_index,
+  int x,
+  int y,
+  TI_REAL number
+) {
+  task_list[task_index].inputs[x][y] = number;
+}
+
 int main() {
   printf("你好，世界\n");
   printf("%d\n", new_task(0, 100, 1, 1, 1));
