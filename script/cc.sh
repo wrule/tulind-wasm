@@ -1,5 +1,5 @@
 #!/bin/bash
-emcc -O3 c/index.c c/tiamalgamation.c -o dist/index.js \
+emcc -O3 c/index.c c/tiamalgamation.c -o dist/tulind.js \
   -s MODULARIZE=1 \
   -s EXPORT_NAME='Tulind' \
   -s EXPORTED_FUNCTIONS='[
