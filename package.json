@@ -8,7 +8,7 @@
     "dev": "node dist/index.js",
     "new": "node script/new.js",
     "patch": "script/patch.sh",
-    "cc": "emcc c/index.c c/tiamalgamation.c -o dist/index.html",
+    "cc": "script/cc.sh",
     "serve": "cd dist && live-server"
   },
   "license": "MIT",
