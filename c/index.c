@@ -74,12 +74,12 @@ TI_REAL outputs_number(int task_index, int x, int y) {
 
 void run_task(int task_index) {
   Task * task = &task_list[task_index];
-  ti_indicator_info indicator = ti_indicators[task->indicator_index];
-  task->outputs_offset = task->inputs_offset + indicator.start(task->options);
-  for (int i = 0; i < indicator.outputs; ++i) {
+  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
+  task->outputs_offset = task->inputs_offset + indicator->start(task->options);
+  for (int i = 0; i < indicator->outputs; ++i) {
     task->outputs_buffer[i] = &task->outputs[i][task->outputs_offset];
   }
-  indicator.indicator(task->size_buffer, (const TI_REAL * *)task->inputs_buffer, task->options, task->outputs_buffer);
+  indicator->indicator(task->size_buffer, (const TI_REAL * *)task->inputs_buffer, task->options, task->outputs_buffer);
 }
 
 int main() {
