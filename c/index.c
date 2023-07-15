@@ -26,6 +26,7 @@ int new_task(int indicator_index, int size, int input_offset) {
   task_list[next_task].size = size - input_offset;
   task_list[next_task].size_buffer = size;
   task_list[next_task].inputs_offset = input_offset;
+  task_list[next_task].outputs_offset = -1;
   ti_indicator_info indicator = ti_indicators[indicator_index];
   task_list[next_task].inputs = malloc(sizeof(TI_REAL *) * indicator.inputs);
   task_list[next_task].inputs_buffer = malloc(sizeof(TI_REAL *) * indicator.inputs);
@@ -35,8 +36,10 @@ int new_task(int indicator_index, int size, int input_offset) {
   }
   task_list[next_task].options = malloc(sizeof(TI_REAL) * indicator.options);
   task_list[next_task].outputs = malloc(sizeof(TI_REAL *) * indicator.outputs);
+  task_list[next_task].outputs_buffer = malloc(sizeof(TI_REAL *) * indicator.outputs);
   for (int i = 0; i < indicator.outputs; ++i) {
-    task_list[next_task].outputs[i] = malloc(sizeof(TI_REAL) * size);
+    task_list[next_task].outputs_buffer[i] = malloc(sizeof(TI_REAL) * size);
+    task_list[next_task].outputs[i] = task_list[next_task].outputs_buffer[i];
   }
   return next_task++;
 }
