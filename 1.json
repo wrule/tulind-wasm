@@ -6,6 +6,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "acos",
@@ -14,6 +17,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ad",
@@ -22,6 +28,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "add",
@@ -30,6 +39,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "adosc",
@@ -38,6 +50,9 @@
 		"inputs": 4,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "adx",
@@ -46,6 +61,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "adxr",
@@ -54,6 +72,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ao",
@@ -62,6 +83,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "apo",
@@ -70,6 +94,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "aroon",
@@ -78,6 +105,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "aroonosc",
@@ -86,6 +116,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "asin",
@@ -94,6 +127,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "atan",
@@ -102,6 +138,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "atr",
@@ -110,6 +149,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "avgprice",
@@ -118,6 +160,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "bbands",
@@ -126,6 +171,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 3,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "bop",
@@ -134,6 +182,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "cci",
@@ -142,6 +193,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ceil",
@@ -150,6 +204,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "cmo",
@@ -158,6 +215,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "cos",
@@ -166,6 +226,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "cosh",
@@ -174,6 +237,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "crossany",
@@ -182,6 +248,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "crossover",
@@ -190,6 +259,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "cvi",
@@ -198,6 +270,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "decay",
@@ -206,6 +281,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "dema",
@@ -214,6 +292,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "di",
@@ -222,6 +303,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "div",
@@ -230,6 +314,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "dm",
@@ -238,6 +325,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "dpo",
@@ -246,6 +336,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "dx",
@@ -254,6 +347,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "edecay",
@@ -262,6 +358,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ema",
@@ -270,6 +369,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "emv",
@@ -278,6 +380,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "exp",
@@ -286,6 +391,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "fisher",
@@ -294,6 +402,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "floor",
@@ -302,6 +413,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "fosc",
@@ -310,6 +424,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "hma",
@@ -318,6 +435,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "kama",
@@ -326,6 +446,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "kvo",
@@ -334,6 +457,9 @@
 		"inputs": 4,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "lag",
@@ -342,6 +468,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "linreg",
@@ -350,6 +479,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "linregintercept",
@@ -358,6 +490,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "linregslope",
@@ -366,6 +501,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ln",
@@ -374,6 +512,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "log10",
@@ -382,6 +523,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "macd",
@@ -390,6 +534,9 @@
 		"inputs": 1,
 		"options": 3,
 		"outputs": 3,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "marketfi",
@@ -398,6 +545,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "mass",
@@ -406,6 +556,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "max",
@@ -414,6 +567,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "md",
@@ -422,6 +578,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "medprice",
@@ -430,6 +589,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "mfi",
@@ -438,6 +600,9 @@
 		"inputs": 4,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "min",
@@ -446,6 +611,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "mom",
@@ -454,6 +622,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "msw",
@@ -462,6 +633,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "mul",
@@ -470,6 +644,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "natr",
@@ -478,6 +655,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "nvi",
@@ -486,6 +666,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "obv",
@@ -494,6 +677,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ppo",
@@ -502,6 +688,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "psar",
@@ -510,6 +699,9 @@
 		"inputs": 2,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "pvi",
@@ -518,6 +710,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "qstick",
@@ -526,6 +721,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "roc",
@@ -534,6 +732,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "rocr",
@@ -542,6 +743,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "round",
@@ -550,6 +754,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "rsi",
@@ -558,6 +765,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sin",
@@ -566,6 +776,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sinh",
@@ -574,6 +787,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sma",
@@ -582,6 +798,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sqrt",
@@ -590,6 +809,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "stddev",
@@ -598,6 +820,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "stderr",
@@ -606,6 +831,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "stoch",
@@ -614,6 +842,9 @@
 		"inputs": 3,
 		"options": 3,
 		"outputs": 2,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "stochrsi",
@@ -622,6 +853,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sub",
@@ -630,6 +864,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "sum",
@@ -638,6 +875,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "tan",
@@ -646,6 +886,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "tanh",
@@ -654,6 +897,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "tema",
@@ -662,6 +908,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "todeg",
@@ -670,6 +919,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "torad",
@@ -678,6 +930,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "tr",
@@ -686,6 +941,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "trima",
@@ -694,6 +952,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "trix",
@@ -702,6 +963,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "trunc",
@@ -710,6 +974,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "tsf",
@@ -718,6 +985,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "typprice",
@@ -726,6 +996,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "ultosc",
@@ -734,6 +1007,9 @@
 		"inputs": 3,
 		"options": 3,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "var",
@@ -742,6 +1018,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "vhf",
@@ -750,6 +1029,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "vidya",
@@ -758,6 +1040,9 @@
 		"inputs": 1,
 		"options": 3,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "volatility",
@@ -766,6 +1051,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "vosc",
@@ -774,6 +1062,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "vwma",
@@ -782,6 +1073,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "wad",
@@ -790,6 +1084,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "wcprice",
@@ -798,6 +1095,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "wilders",
@@ -806,6 +1106,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "willr",
@@ -814,6 +1117,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "wma",
@@ -822,6 +1128,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
 	},
 	{
 		"name": "zlema",
@@ -830,5 +1139,7 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-	},
-]
+		"input_names": [],
+		"option_names": [],
+		"output_names": []
+	}]
