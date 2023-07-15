@@ -12,6 +12,7 @@ typedef struct {
   TI_REAL * * inputs;
   TI_REAL * * inputs_buffer;
   TI_REAL * options;
+  int outputs_offset;
   TI_REAL * * outputs;
   TI_REAL * * outputs_buffer;
 } Task;
