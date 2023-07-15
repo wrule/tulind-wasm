@@ -3,6 +3,17 @@
 #include "candles.h"
 #include "indicators.h"
 
+void print_string_list(const char * const list[TI_MAXINDPARAMS], int size) {
+  int first = 1;
+  printf("[");
+  for (int i = 0; i < size; ++i) {
+    if (first == 0) printf(",");
+    first = 0;
+    printf("\"%s\"", list[i]);
+  }
+  printf("]");
+}
+
 int main() {
   printf("你好，世界\n");
   const ti_indicator_info *info = ti_indicators;
@@ -18,9 +29,15 @@ int main() {
     printf("\t\t\"inputs\": %d,\n", info->inputs);
     printf("\t\t\"options\": %d,\n", info->options);
     printf("\t\t\"outputs\": %d,\n", info->outputs);
-    printf("\t\t\"input_names\": [],\n");
-    printf("\t\t\"option_names\": [],\n");
-    printf("\t\t\"output_names\": []\n");
+    printf("\t\t\"input_names\": ");
+    print_string_list(info->input_names, info->inputs);
+    printf(",\n");
+    printf("\t\t\"option_names\": ");
+    print_string_list(info->option_names, info->options);
+    printf(",\n");
+    printf("\t\t\"output_names\": ");
+    print_string_list(info->output_names, info->outputs);
+    printf("\n");
     printf("\t}");
     ++info;
   }

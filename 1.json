@@ -6,9 +6,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["abs"]
 	},
 	{
 		"name": "acos",
@@ -17,9 +17,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["acos"]
 	},
 	{
 		"name": "ad",
@@ -28,9 +28,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","close","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["ad"]
 	},
 	{
 		"name": "add",
@@ -39,9 +39,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["add"]
 	},
 	{
 		"name": "adosc",
@@ -50,9 +50,9 @@
 		"inputs": 4,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close","volume"],
+		"option_names": ["short_period","long_period"],
+		"output_names": ["adosc"]
 	},
 	{
 		"name": "adx",
@@ -61,9 +61,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["adx"]
 	},
 	{
 		"name": "adxr",
@@ -72,9 +72,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["adxr"]
 	},
 	{
 		"name": "ao",
@@ -83,9 +83,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["ao"]
 	},
 	{
 		"name": "apo",
@@ -94,9 +94,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["short_period","long_period"],
+		"output_names": ["apo"]
 	},
 	{
 		"name": "aroon",
@@ -105,9 +105,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["aroon_down","aroon_up"]
 	},
 	{
 		"name": "aroonosc",
@@ -116,9 +116,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["aroonosc"]
 	},
 	{
 		"name": "asin",
@@ -127,9 +127,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["asin"]
 	},
 	{
 		"name": "atan",
@@ -138,9 +138,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["atan"]
 	},
 	{
 		"name": "atr",
@@ -149,9 +149,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["period"],
+		"output_names": ["atr"]
 	},
 	{
 		"name": "avgprice",
@@ -160,9 +160,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["open","high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["avgprice"]
 	},
 	{
 		"name": "bbands",
@@ -171,9 +171,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 3,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period","stddev"],
+		"output_names": ["bbands_lower","bbands_middle","bbands_upper"]
 	},
 	{
 		"name": "bop",
@@ -182,9 +182,9 @@
 		"inputs": 4,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["open","high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["bop"]
 	},
 	{
 		"name": "cci",
@@ -193,9 +193,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["period"],
+		"output_names": ["cci"]
 	},
 	{
 		"name": "ceil",
@@ -204,9 +204,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["ceil"]
 	},
 	{
 		"name": "cmo",
@@ -215,9 +215,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["cmo"]
 	},
 	{
 		"name": "cos",
@@ -226,9 +226,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["cos"]
 	},
 	{
 		"name": "cosh",
@@ -237,9 +237,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["cosh"]
 	},
 	{
 		"name": "crossany",
@@ -248,9 +248,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["crossany"]
 	},
 	{
 		"name": "crossover",
@@ -259,9 +259,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["crossover"]
 	},
 	{
 		"name": "cvi",
@@ -270,9 +270,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["cvi"]
 	},
 	{
 		"name": "decay",
@@ -281,9 +281,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["decay"]
 	},
 	{
 		"name": "dema",
@@ -292,9 +292,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["dema"]
 	},
 	{
 		"name": "di",
@@ -303,9 +303,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["period"],
+		"output_names": ["plus_di","minus_di"]
 	},
 	{
 		"name": "div",
@@ -314,9 +314,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["div"]
 	},
 	{
 		"name": "dm",
@@ -325,9 +325,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["plus_dm","minus_dm"]
 	},
 	{
 		"name": "dpo",
@@ -336,9 +336,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["dpo"]
 	},
 	{
 		"name": "dx",
@@ -347,9 +347,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["dx"]
 	},
 	{
 		"name": "edecay",
@@ -358,9 +358,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["edecay"]
 	},
 	{
 		"name": "ema",
@@ -369,9 +369,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["ema"]
 	},
 	{
 		"name": "emv",
@@ -380,9 +380,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["emv"]
 	},
 	{
 		"name": "exp",
@@ -391,9 +391,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["exp"]
 	},
 	{
 		"name": "fisher",
@@ -402,9 +402,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["fisher","fisher_signal"]
 	},
 	{
 		"name": "floor",
@@ -413,9 +413,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["floor"]
 	},
 	{
 		"name": "fosc",
@@ -424,9 +424,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["fosc"]
 	},
 	{
 		"name": "hma",
@@ -435,9 +435,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["hma"]
 	},
 	{
 		"name": "kama",
@@ -446,9 +446,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["kama"]
 	},
 	{
 		"name": "kvo",
@@ -457,9 +457,9 @@
 		"inputs": 4,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close","volume"],
+		"option_names": ["short_period","long_period"],
+		"output_names": ["kvo"]
 	},
 	{
 		"name": "lag",
@@ -468,9 +468,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["lag"]
 	},
 	{
 		"name": "linreg",
@@ -479,9 +479,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["linreg"]
 	},
 	{
 		"name": "linregintercept",
@@ -490,9 +490,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["linregintercept"]
 	},
 	{
 		"name": "linregslope",
@@ -501,9 +501,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["linregslope"]
 	},
 	{
 		"name": "ln",
@@ -512,9 +512,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["ln"]
 	},
 	{
 		"name": "log10",
@@ -523,9 +523,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["log10"]
 	},
 	{
 		"name": "macd",
@@ -534,9 +534,9 @@
 		"inputs": 1,
 		"options": 3,
 		"outputs": 3,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["short_period","long_period","signal_period"],
+		"output_names": ["macd","macd_signal","macd_histogram"]
 	},
 	{
 		"name": "marketfi",
@@ -545,9 +545,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["marketfi"]
 	},
 	{
 		"name": "mass",
@@ -556,9 +556,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["period"],
+		"output_names": ["mass"]
 	},
 	{
 		"name": "max",
@@ -567,9 +567,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["max"]
 	},
 	{
 		"name": "md",
@@ -578,9 +578,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["md"]
 	},
 	{
 		"name": "medprice",
@@ -589,9 +589,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["medprice"]
 	},
 	{
 		"name": "mfi",
@@ -600,9 +600,9 @@
 		"inputs": 4,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close","volume"],
+		"option_names": ["period"],
+		"output_names": ["mfi"]
 	},
 	{
 		"name": "min",
@@ -611,9 +611,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["min"]
 	},
 	{
 		"name": "mom",
@@ -622,9 +622,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["mom"]
 	},
 	{
 		"name": "msw",
@@ -633,9 +633,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["msw_sine","msw_lead"]
 	},
 	{
 		"name": "mul",
@@ -644,9 +644,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["mul"]
 	},
 	{
 		"name": "natr",
@@ -655,9 +655,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["period"],
+		"output_names": ["natr"]
 	},
 	{
 		"name": "nvi",
@@ -666,9 +666,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["close","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["nvi"]
 	},
 	{
 		"name": "obv",
@@ -677,9 +677,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["close","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["obv"]
 	},
 	{
 		"name": "ppo",
@@ -688,9 +688,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["short_period","long_period"],
+		"output_names": ["ppo"]
 	},
 	{
 		"name": "psar",
@@ -699,9 +699,9 @@
 		"inputs": 2,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low"],
+		"option_names": ["acceleration_factor_step","acceleration_factor_maximum"],
+		"output_names": ["psar"]
 	},
 	{
 		"name": "pvi",
@@ -710,9 +710,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["close","volume"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["pvi"]
 	},
 	{
 		"name": "qstick",
@@ -721,9 +721,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["open","close"],
+		"option_names": ["period"],
+		"output_names": ["qstick"]
 	},
 	{
 		"name": "roc",
@@ -732,9 +732,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["roc"]
 	},
 	{
 		"name": "rocr",
@@ -743,9 +743,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["rocr"]
 	},
 	{
 		"name": "round",
@@ -754,9 +754,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["round"]
 	},
 	{
 		"name": "rsi",
@@ -765,9 +765,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["rsi"]
 	},
 	{
 		"name": "sin",
@@ -776,9 +776,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["sin"]
 	},
 	{
 		"name": "sinh",
@@ -787,9 +787,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["sinh"]
 	},
 	{
 		"name": "sma",
@@ -798,9 +798,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["sma"]
 	},
 	{
 		"name": "sqrt",
@@ -809,9 +809,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["sqrt"]
 	},
 	{
 		"name": "stddev",
@@ -820,9 +820,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["stddev"]
 	},
 	{
 		"name": "stderr",
@@ -831,9 +831,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["stderr"]
 	},
 	{
 		"name": "stoch",
@@ -842,9 +842,9 @@
 		"inputs": 3,
 		"options": 3,
 		"outputs": 2,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["k_period","k_slowing_period","d_period"],
+		"output_names": ["stoch_k","stoch_d"]
 	},
 	{
 		"name": "stochrsi",
@@ -853,9 +853,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["stochrsi"]
 	},
 	{
 		"name": "sub",
@@ -864,9 +864,9 @@
 		"inputs": 2,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real","real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["sub"]
 	},
 	{
 		"name": "sum",
@@ -875,9 +875,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["sum"]
 	},
 	{
 		"name": "tan",
@@ -886,9 +886,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["tan"]
 	},
 	{
 		"name": "tanh",
@@ -897,9 +897,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["tanh"]
 	},
 	{
 		"name": "tema",
@@ -908,9 +908,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["tema"]
 	},
 	{
 		"name": "todeg",
@@ -919,9 +919,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["degrees"]
 	},
 	{
 		"name": "torad",
@@ -930,9 +930,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["radians"]
 	},
 	{
 		"name": "tr",
@@ -941,9 +941,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["tr"]
 	},
 	{
 		"name": "trima",
@@ -952,9 +952,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["trima"]
 	},
 	{
 		"name": "trix",
@@ -963,9 +963,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["trix"]
 	},
 	{
 		"name": "trunc",
@@ -974,9 +974,9 @@
 		"inputs": 1,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["real"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["trunc"]
 	},
 	{
 		"name": "tsf",
@@ -985,9 +985,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["tsf"]
 	},
 	{
 		"name": "typprice",
@@ -996,9 +996,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["typprice"]
 	},
 	{
 		"name": "ultosc",
@@ -1007,9 +1007,9 @@
 		"inputs": 3,
 		"options": 3,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["short_period","medium_period","long_period"],
+		"output_names": ["ultosc"]
 	},
 	{
 		"name": "var",
@@ -1018,9 +1018,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["var"]
 	},
 	{
 		"name": "vhf",
@@ -1029,9 +1029,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["vhf"]
 	},
 	{
 		"name": "vidya",
@@ -1040,9 +1040,9 @@
 		"inputs": 1,
 		"options": 3,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["short_period","long_period","alpha"],
+		"output_names": ["vidya"]
 	},
 	{
 		"name": "volatility",
@@ -1051,9 +1051,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["volatility"]
 	},
 	{
 		"name": "vosc",
@@ -1062,9 +1062,9 @@
 		"inputs": 1,
 		"options": 2,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["volume"],
+		"option_names": ["short_period","long_period"],
+		"output_names": ["vosc"]
 	},
 	{
 		"name": "vwma",
@@ -1073,9 +1073,9 @@
 		"inputs": 2,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["close","volume"],
+		"option_names": ["period"],
+		"output_names": ["vwma"]
 	},
 	{
 		"name": "wad",
@@ -1084,9 +1084,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["wad"]
 	},
 	{
 		"name": "wcprice",
@@ -1095,9 +1095,9 @@
 		"inputs": 3,
 		"options": 0,
 		"outputs": 1,
-		"input_names": [],
+		"input_names": ["high","low","close"],
 		"option_names": [],
-		"output_names": []
+		"output_names": ["wcprice"]
 	},
 	{
 		"name": "wilders",
@@ -1106,9 +1106,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["wilders"]
 	},
 	{
 		"name": "willr",
@@ -1117,9 +1117,9 @@
 		"inputs": 3,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["high","low","close"],
+		"option_names": ["period"],
+		"output_names": ["willr"]
 	},
 	{
 		"name": "wma",
@@ -1128,9 +1128,9 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["wma"]
 	},
 	{
 		"name": "zlema",
@@ -1139,7 +1139,7 @@
 		"inputs": 1,
 		"options": 1,
 		"outputs": 1,
-		"input_names": [],
-		"option_names": [],
-		"output_names": []
+		"input_names": ["real"],
+		"option_names": ["period"],
+		"output_names": ["zlema"]
 	}]
