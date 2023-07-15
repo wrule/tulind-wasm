@@ -49,13 +49,29 @@ int new_task(
   return next_task++;
 }
 
-void input_number(
+void inputs_number(
   int task_index,
   int x,
   int y,
   TI_REAL number
 ) {
   task_list[task_index].inputs[x][y] = number;
+}
+
+void options_number(
+  int task_index,
+  int x,
+  TI_REAL number
+) {
+  task_list[task_index].options[x] = number;
+}
+
+TI_REAL outputs_number(
+  int task_index,
+  int x,
+  int y
+) {
+  return task_list[task_index].inputs[x][y];
 }
 
 void run_task(int task_index) {
@@ -66,8 +82,13 @@ void run_task(int task_index) {
 
 void show_task_output(int task_index) {
   Task task = task_list[task_index];
+  for (int y = 0; y < task.outputs_length; ++y) {
+    for (int x = 0; x < task.size; ++x) {
+      printf("%lf ", task.outputs[y][x]);
+    }
+    printf("\n");
+  }
 }
-
 
 int main() {
   printf("你好，世界\n");
