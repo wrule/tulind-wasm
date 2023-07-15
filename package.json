@@ -8,7 +8,8 @@
     "dev": "node dist/index.js",
     "new": "node script/new.js",
     "patch": "script/patch.sh",
-    "cc": "emcc c/index.c c/tiamalgamation.c -o dist/index.html"
+    "cc": "emcc c/index.c c/tiamalgamation.c -o dist/index.html",
+    "serve": "cd dist && live-server"
   },
   "license": "MIT",
   "private": false,
@@ -16,6 +17,7 @@
     "@types/node": "18.16.1",
     "dayjs": "1.11.9",
     "global-agent": "3.0.0",
+    "live-server": "^1.2.2",
     "typescript": "5.1.6"
   }
 }
