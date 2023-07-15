@@ -10,7 +10,7 @@
     "patch": "script/patch.sh",
     "cc": "script/cc.sh",
     "cprint": "script/cprint.sh",
-    "print": "dist/print",
+    "print": "npm run cprint && dist/print",
     "serve": "cd dist && live-server"
   },
   "license": "MIT",
