@@ -15,7 +15,7 @@ void print_string_list(const char * const list[TI_MAXINDPARAMS], int size) {
 }
 
 int main() {
-  const ti_indicator_info *info = ti_indicators;
+  const ti_indicator_info * info = ti_indicators;
   int first = 1;
   printf("[\n");
   while (info->name != 0) {
