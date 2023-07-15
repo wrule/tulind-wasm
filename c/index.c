@@ -8,11 +8,13 @@
 typedef struct {
   int indicator_index;
   int size;
-  TI_REAL * * inputs;
   int inputs_offset;
+  TI_REAL * * inputs;
+  TI_REAL * * inputs_buffer;
   TI_REAL * options;
-  TI_REAL * * outputs;
   int outputs_offset;
+  TI_REAL * * outputs;
+  TI_REAL * * outputs_buffer;
 } Task;
 
 Task task_list[TASK_MAX];
