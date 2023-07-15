@@ -76,13 +76,3 @@ void run_task(int task_index) {
   ti_indicator_info indicator = ti_indicators[task.indicator];
   indicator.indicator(task.size, (const TI_REAL * *)task.inputs, task.options, task.outputs);
 }
-
-void show_task_output(int task_index) {
-  Task task = task_list[task_index];
-  for (int y = 0; y < task.outputs_length; ++y) {
-    for (int x = 0; x < task.size; ++x) {
-      printf("%lf ", task.outputs[y][x]);
-    }
-    printf("\n");
-  }
-}
