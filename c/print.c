@@ -15,7 +15,6 @@ void print_string_list(const char * const list[TI_MAXINDPARAMS], int size) {
 }
 
 int main() {
-  printf("你好，世界\n");
   const ti_indicator_info *info = ti_indicators;
   int first = 1;
   printf("[\n");
