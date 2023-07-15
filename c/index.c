@@ -19,21 +19,16 @@ int next_task = 0;
 int new_task(int indicator_index, int size) {
   task_list[next_task].indicator_index = indicator_index;
   task_list[next_task].size = size;
-
   ti_indicator_info indicator = ti_indicators[indicator_index];
-
   task_list[next_task].inputs = malloc(sizeof(TI_REAL *) * indicator.inputs);
   for (int i = 0; i < indicator.inputs; ++i) {
     task_list[next_task].inputs[i] = malloc(sizeof(TI_REAL) * size);
   }
-
   task_list[next_task].options = malloc(sizeof(TI_REAL) * indicator.options);
-
   task_list[next_task].outputs = malloc(sizeof(TI_REAL *) * indicator.outputs);
   for (int i = 0; i < indicator.outputs; ++i) {
     task_list[next_task].outputs[i] = malloc(sizeof(TI_REAL) * size);
   }
-
   return next_task++;
 }
 
@@ -70,6 +65,6 @@ void run_task(int task_index) {
 
 int main() {
   printf("你好，世界\n");
-  printf("%d\n", ti_indicators[0].in)
+  printf("%d\n", ti_indicators[0].inputs);
   return 0;
 }
