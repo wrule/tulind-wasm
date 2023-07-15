@@ -40,6 +40,6 @@ int main() {
     printf("\t}");
     ++info;
   }
-  printf("]\n");
+  printf("\n]\n");
   return 0;
 }
