@@ -9,6 +9,7 @@
     "new": "node script/new.js",
     "patch": "script/patch.sh",
     "cc": "script/cc.sh",
+    "cprint": "script/cprint.sh",
     "serve": "cd dist && live-server"
   },
   "license": "MIT",
