@@ -51,7 +51,9 @@ int new_task(
 
 int main() {
   printf("你好，世界\n");
-  new_task(0, 100, 1, 1, 1);
+  printf("%d\n", new_task(0, 100, 1, 1, 1));
+  printf("%d\n", new_task(0, 100, 1, 1, 1));
+  printf("%d\n", new_task(0, 100, 1, 1, 1));
   printf("你好，鸡毛\n");
   return 0;
 }
