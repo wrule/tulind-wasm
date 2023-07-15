@@ -86,18 +86,18 @@ void run_task(int task_index) {
   indicator->indicator(task->size_buffer, (const TI_REAL * *)task->inputs_buffer, task->options, task->outputs_buffer);
 }
 
-int main() {
-  printf("你好，世界\n");
-  int task_index = new_task(72, 10, 2);
-  for (int i = 0; i < 10; ++i) {
-    inputs_number(task_index, i, 0, i);
-  }
-  options_number(task_index, 0, 4);
-  run_task(task_index);
-  for (int i = 0; i < 10; ++i) {
-    printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
-  }
-  printf("%d\n", task_list[task_index].outputs_offset);
-  free_task(task_index);
-  return 0;
-}
+// int main() {
+//   printf("你好，世界\n");
+//   int task_index = new_task(72, 10, 2);
+//   for (int i = 0; i < 10; ++i) {
+//     inputs_number(task_index, i, 0, i);
+//   }
+//   options_number(task_index, 0, 4);
+//   run_task(task_index);
+//   for (int i = 0; i < 10; ++i) {
+//     printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
+//   }
+//   printf("%d\n", task_list[task_index].outputs_offset);
+//   free_task(task_index);
+//   return 0;
+// }
