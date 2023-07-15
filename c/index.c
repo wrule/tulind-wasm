@@ -94,5 +94,6 @@ int main() {
     printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
   }
   printf("%d\n", task_list[task_index].outputs_offset);
+  free_task(task_index);
   return 0;
 }
