@@ -29,21 +29,22 @@ Task task_list[TASK_MAX];
 int next_task = 0;
 
 int new_task(int indicator_index, int size, int input_offset) {
-  task_list[next_task].indicator_index = indicator_index;
-  task_list[next_task].size = size;
-  task_list[next_task].size_buffer = size - input_offset;
-  task_list[next_task].inputs_offset = input_offset;
-  task_list[next_task].outputs_offset = -1;
+  Task * task = &task_list[next_task];
+  task->indicator_index = indicator_index;
+  task->size = size;
+  task->size_buffer = size - input_offset;
+  task->inputs_offset = input_offset;
+  task->outputs_offset = -1;
   for (int i = 0; i < DATA_MAX; ++i)
-    task_list[next_task].inputs_map[i][0] = DISABLED;
+    task->inputs_map[i][0] = DISABLED;
   ti_indicator_info indicator = ti_indicators[indicator_index];
   for (int i = 0; i < indicator.inputs; ++i) {
-    task_list[next_task].inputs[i] = malloc(sizeof(TI_REAL) * size);
-    task_list[next_task].inputs_buffer[i] = &task_list[next_task].inputs[i][input_offset];
+    task->inputs[i] = malloc(sizeof(TI_REAL) * size);
+    task->inputs_buffer[i] = &task->inputs[i][input_offset];
   }
   for (int i = 0; i < indicator.outputs; ++i) {
-    task_list[next_task].outputs[i] = malloc(sizeof(TI_REAL) * size);
-    task_list[next_task].outputs_buffer[i] = task_list[next_task].outputs[i];
+    task->outputs[i] = malloc(sizeof(TI_REAL) * size);
+    task->outputs_buffer[i] = task->outputs[i];
   }
   return next_task++;
 }
