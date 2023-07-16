@@ -49,6 +49,23 @@ int new_task(int indicator_index, int size, int input_offset) {
   return next_task++;
 }
 
+void set_inputs_map(
+  int task_index,
+  int input_index,
+  int enabled,
+  int target_index,
+  int is_outputs,
+  int data_index,
+  int start
+) {
+  Task * task = &task_list[task_index];
+  task->inputs_map[input_index][0] = enabled;
+  task->inputs_map[input_index][1] = target_index;
+  task->inputs_map[input_index][2] = is_outputs;
+  task->inputs_map[input_index][3] = data_index;
+  task->inputs_map[input_index][4] = start;
+}
+
 void free_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
