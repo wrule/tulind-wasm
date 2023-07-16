@@ -65,7 +65,10 @@ void enable_inputs_map(
   info->target_index = target_index;
   info->is_outputs = is_outputs;
   info->data_index = data_index;
-  if (task->inputs[input_index] != NULL) free(task->inputs[input_index]);
+  if (task->inputs[input_index] != NULL) {
+    free(task->inputs[input_index]);
+    task->inputs[input_index] = NULL;
+  }
 }
 
 void free_task(int task_index) {
@@ -85,7 +88,11 @@ void free_task(int task_index) {
 }
 
 void inputs_number(int task_index, int x, int y, TI_REAL number) {
-  task_list[task_index].inputs[y][x] = number;
+  Task * task = &task_list[task_index];
+  if (task->inputs[y] == NULL)
+    task->inputs[y] = malloc(sizeof(TI_REAL) * task->size);
+  task->inputs[y][x] = number;
+  task->inputs_map[y].enabled = DISABLED;
 }
 
 void options_number(int task_index, int x, TI_REAL number) {
