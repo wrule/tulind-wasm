@@ -77,10 +77,6 @@ void options_number(int task_index, int x, TI_REAL number) {
   task_list[task_index].options[x] = number;
 }
 
-int outputs_offset(int task_index) {
-  return task_list[task_index].outputs_offset;
-}
-
 TI_REAL outputs_number(int task_index, int x, int y) {
   return task_list[task_index].outputs[y][x];
 }
