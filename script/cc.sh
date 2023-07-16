@@ -9,5 +9,6 @@ emcc -O3 c/index.c c/tiamalgamation.c -o dist/tulind.js \
     "_options_number",
     "_outputs_number",
     "_link_task",
-    "_run_task"
+    "_run_task",
+    "_run"
   ]'
