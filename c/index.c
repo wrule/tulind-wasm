@@ -25,10 +25,8 @@ typedef struct {
   MapInfo inputs_map[DATA_MAX];
   int inputs_offset;
   TI_REAL * inputs[DATA_MAX];
-  TI_REAL * inputs_buffer[DATA_MAX];
   int outputs_offset;
   TI_REAL * outputs[DATA_MAX];
-  TI_REAL * outputs_buffer[DATA_MAX];
 } Task;
 
 Task task_list[TASK_MAX];
@@ -100,9 +98,6 @@ void link_task(int task_index) {
     }
   }
   task->inputs_offset = inputs_offset;
-  for (int i = 0; i < indicator->inputs; ++i) {
-    task->inputs_buffer[i] = &task->inputs[i][inputs_offset];
-  }
 }
 
 void run_task(int task_index) {
@@ -110,14 +105,17 @@ void run_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
   task->outputs_offset = task->inputs_offset + indicator->start(task->options);
-  for (int i = 0; i < indicator->outputs; ++i) {
-    task->outputs_buffer[i] = &task->outputs[i][task->outputs_offset];
-  }
+  const TI_REAL * inputs[DATA_MAX];
+  TI_REAL * outputs[DATA_MAX];
+  for (int i = 0; i < indicator->inputs; ++i)
+    inputs[i] = &task->inputs[i][task->inputs_offset];
+  for (int i = 0; i < indicator->outputs; ++i)
+    outputs[i] = &task->outputs[i][task->outputs_offset];
   indicator->indicator(
     task->size - task->inputs_offset,
-    (const TI_REAL * *)task->inputs_buffer,
+    inputs,
     task->options,
-    task->outputs_buffer
+    outputs
   );
 }
 
