@@ -47,7 +47,7 @@ int new_task(int indicator_index, int size, int input_offset) {
   return next_task++;
 }
 
-void set_inputs_map(
+void enable_inputs_map(
   int task_index,
   int input_index,
   int target_index,
