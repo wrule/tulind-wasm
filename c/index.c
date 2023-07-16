@@ -115,7 +115,12 @@ void run_task(int task_index) {
   for (int i = 0; i < indicator->outputs; ++i) {
     task->outputs_buffer[i] = &task->outputs[i][task->outputs_offset];
   }
-  indicator->indicator(task->size_buffer, (const TI_REAL * *)task->inputs_buffer, task->options, task->outputs_buffer);
+  indicator->indicator(
+    task->size - task->inputs_offset,
+    (const TI_REAL * *)task->inputs_buffer,
+    task->options,
+    task->outputs_buffer
+  );
 }
 
 // int main() {
