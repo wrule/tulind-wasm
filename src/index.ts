@@ -7,8 +7,8 @@ async function main() {
   source.forEach((number, offset) => {
     tulind._inputs_number(task_index, 0, offset, number);
   });
-  tulind._options_number(task_index, 0, 2);
-  tulind._run_task(task_index);
+  tulind._options_number(task_index, 0, 3);
+  tulind._run();
   source.forEach((_, offset) => {
     console.log(tulind._outputs_number(task_index, 0, offset));
   });
