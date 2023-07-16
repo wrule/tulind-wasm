@@ -38,10 +38,17 @@ async function main() {
   source.forEach((number, offset) => {
     tulind._inputs_number(task_index, 0, offset, number);
   });
-  tulind._options_number(task_index, 0, 3);
+  tulind._options_number(task_index, 0, 2);
+  const b = tulind._new_task(72, source.length);
+  tulind._inputs_map(b, 0, task_index, 1, 0);
+  tulind._options_number(b, 0, 3);
   tulind._run();
   source.forEach((_, offset) => {
     console.log(tulind._outputs_number(task_index, 0, offset));
+  });
+  console.log('');
+  source.forEach((_, offset) => {
+    console.log(tulind._outputs_number(b, 0, offset));
   });
 }
 
