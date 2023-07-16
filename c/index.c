@@ -73,12 +73,12 @@ void inputs_map(
   info->data_index = data_index;
 }
 
-void options_number(int task_index, int x, TI_REAL number) {
-  task_list[task_index].options[x] = number;
+void options_number(int task_index, int offset, TI_REAL number) {
+  task_list[task_index].options[offset] = number;
 }
 
-TI_REAL outputs_number(int task_index, int x, int y) {
-  return task_list[task_index].outputs[y][x];
+TI_REAL outputs_number(int task_index, int output_index, int offset) {
+  return task_list[task_index].outputs[output_index][offset];
 }
 
 void run_task(int task_index) {
