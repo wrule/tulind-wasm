@@ -16,7 +16,6 @@ typedef struct {
   int target_index;
   int is_outputs;
   int data_index;
-  int start;
 } MapInfo;
 
 typedef struct {
@@ -51,18 +50,15 @@ int new_task(int indicator_index, int size, int input_offset) {
 void set_inputs_map(
   int task_index,
   int input_index,
-  int enabled,
   int target_index,
   int is_outputs,
-  int data_index,
-  int start
+  int data_index
 ) {
-  Task * task = &task_list[task_index];
-  task->inputs_map[input_index].enabled = enabled;
-  task->inputs_map[input_index].target_index = target_index;
-  task->inputs_map[input_index].is_outputs = is_outputs;
-  task->inputs_map[input_index].data_index = data_index;
-  task->inputs_map[input_index].start = start;
+  MapInfo * info = &task_list[task_index].inputs_map[input_index];
+  info->enabled = ENABLED;
+  info->target_index = target_index;
+  info->is_outputs = is_outputs;
+  info->data_index = data_index;
 }
 
 void free_task(int task_index) {
