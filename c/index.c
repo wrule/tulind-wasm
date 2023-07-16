@@ -71,22 +71,6 @@ void enable_inputs_map(
   }
 }
 
-void free_task(int task_index) {
-  Task * task = &task_list[task_index];
-  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
-  for (int i = 0; i < indicator->inputs; ++i) {
-    free(task->inputs[i]);
-  }
-  free(task->inputs);
-  free(task->inputs_buffer);
-  free(task->options);
-  for (int i = 0; i < indicator->outputs; ++i) {
-    free(task->outputs[i]);
-  }
-  free(task->outputs);
-  free(task->outputs_buffer);
-}
-
 void inputs_number(int task_index, int x, int y, TI_REAL number) {
   Task * task = &task_list[task_index];
   if (task->inputs[y] == NULL)
