@@ -35,12 +35,10 @@ typedef struct {
 Task task_list[TASK_MAX];
 int next_task = 0;
 
-int new_task(int indicator_index, int size, int input_offset) {
+int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
   task->indicator_index = indicator_index;
   task->size = size;
-  task->size_buffer = size - input_offset;
-  task->inputs_offset = input_offset;
   task->outputs_offset = -1;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
