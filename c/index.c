@@ -21,7 +21,6 @@ typedef struct {
 typedef struct {
   int indicator_index;
   int size;
-  int size_buffer;
   int inputs_offset;
   int outputs_offset;
   TI_REAL options[DATA_MAX];
