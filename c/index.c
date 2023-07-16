@@ -65,6 +65,7 @@ void enable_inputs_map(
   info->target_index = target_index;
   info->is_outputs = is_outputs;
   info->data_index = data_index;
+  if (task->inputs[input_index] != NULL) free(task->inputs[input_index]);
 }
 
 void free_task(int task_index) {
