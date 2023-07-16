@@ -45,15 +45,6 @@ int new_task(int indicator_index, int size, int input_offset) {
   task->outputs_offset = -1;
   for (int i = 0; i < DATA_MAX; ++i)
     task->inputs_map[i].enabled = DISABLED;
-  ti_indicator_info indicator = ti_indicators[indicator_index];
-  for (int i = 0; i < indicator.inputs; ++i) {
-    task->inputs[i] = malloc(sizeof(TI_REAL) * size);
-    task->inputs_buffer[i] = &task->inputs[i][input_offset];
-  }
-  for (int i = 0; i < indicator.outputs; ++i) {
-    task->outputs[i] = malloc(sizeof(TI_REAL) * size);
-    task->outputs_buffer[i] = task->outputs[i];
-  }
   return next_task++;
 }
 
