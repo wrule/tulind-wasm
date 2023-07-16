@@ -12,17 +12,25 @@
 #define IS_INPUTS 1
 
 typedef struct {
+  int enabled;
+  int target_index;
+  int is_outputs;
+  int data_index;
+  int start;
+} MapInfo;
+
+typedef struct {
   int indicator_index;
   int size;
   int size_buffer;
   int inputs_offset;
   int outputs_offset;
   TI_REAL options[DATA_MAX];
+  MapInfo inputs_map[DATA_MAX];
   TI_REAL * inputs[DATA_MAX];
   TI_REAL * inputs_buffer[DATA_MAX];
   TI_REAL * outputs[DATA_MAX];
   TI_REAL * outputs_buffer[DATA_MAX];
-  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
 } Task;
 
 Task task_list[TASK_MAX];
@@ -36,7 +44,7 @@ int new_task(int indicator_index, int size, int input_offset) {
   task->inputs_offset = input_offset;
   task->outputs_offset = -1;
   for (int i = 0; i < DATA_MAX; ++i)
-    task->inputs_map[i][0] = DISABLED;
+    task->inputs_map[i].enabled = DISABLED;
   ti_indicator_info indicator = ti_indicators[indicator_index];
   for (int i = 0; i < indicator.inputs; ++i) {
     task->inputs[i] = malloc(sizeof(TI_REAL) * size);
@@ -59,11 +67,11 @@ void set_inputs_map(
   int start
 ) {
   Task * task = &task_list[task_index];
-  task->inputs_map[input_index][0] = enabled;
-  task->inputs_map[input_index][1] = target_index;
-  task->inputs_map[input_index][2] = is_outputs;
-  task->inputs_map[input_index][3] = data_index;
-  task->inputs_map[input_index][4] = start;
+  task->inputs_map[input_index].enabled = enabled;
+  task->inputs_map[input_index].target_index = target_index;
+  task->inputs_map[input_index].is_outputs = is_outputs;
+  task->inputs_map[input_index].data_index = data_index;
+  task->inputs_map[input_index].start = start;
 }
 
 void free_task(int task_index) {
