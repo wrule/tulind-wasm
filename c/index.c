@@ -123,6 +123,11 @@ void run_task(int task_index) {
   );
 }
 
+void run() {
+  for (int i = 0; i < next_task; ++i) {
+    run_task(i);
+  }
+}
 // int main() {
 //   printf("你好，世界\n");
 //   int task_index = new_task(72, 10, 2);
