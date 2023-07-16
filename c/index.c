@@ -50,7 +50,12 @@ int new_task(int indicator_index, int size) {
   return next_task++;
 }
 
-void inputs_number(int task_index, int input_index, int offset, TI_REAL number) {
+void inputs_number(
+  int task_index,
+  int input_index,
+  int offset,
+  TI_REAL number
+) {
   Task * task = &task_list[task_index];
   if (task->inputs[input_index] == NULL)
     task->inputs[input_index] = malloc(sizeof(TI_REAL) * task->size);
