@@ -19,6 +19,7 @@ typedef struct {
 } MapInfo;
 
 typedef struct {
+  int used;
   int indicator_index;
   int size;
   TI_REAL options[DATA_MAX];
@@ -32,6 +33,11 @@ typedef struct {
 Task task_list[TASK_MAX];
 int next_task = 0;
 
+void init_task_list() {
+  for (int i = 0; i < TASK_MAX; ++i)
+    task_list[i].used = 0;
+}
+
 int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
   task->indicator_index = indicator_index;
@@ -40,6 +46,7 @@ int new_task(int indicator_index, int size) {
     task->inputs[i] = NULL;
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
   }
+  task->used = 1;
   return next_task++;
 }
 
@@ -125,18 +132,7 @@ void run() {
   }
 }
 
-// int main() {
-//   printf("你好，世界\n");
-//   int task_index = new_task(72, 10, 2);
-//   for (int i = 0; i < 10; ++i) {
-//     inputs_number(task_index, i, 0, i);
-//   }
-//   options_number(task_index, 0, 4);
-//   run_task(task_index);
-//   for (int i = 0; i < 10; ++i) {
-//     printf("%d\t%lf\n", i, outputs_number(task_index, i, 0));
-//   }
-//   printf("%d\n", task_list[task_index].outputs_offset);
-//   free_task(task_index);
-//   return 0;
-// }
+int main() {
+  init_task_list();
+  return 0;
+}
