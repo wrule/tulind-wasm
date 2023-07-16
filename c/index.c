@@ -43,7 +43,7 @@ int new_task(int indicator_index, int size) {
   task->size = size;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
-    task->outputs[i] = NULL;
+    task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
   }
   return next_task++;
 }
@@ -109,6 +109,7 @@ void link_task(int task_index) {
 }
 
 void run_task(int task_index) {
+  link_task(task_index);
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
   task->outputs_offset = task->inputs_offset + indicator->start(task->options);
