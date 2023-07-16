@@ -38,7 +38,6 @@ int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
   task->indicator_index = indicator_index;
   task->size = size;
-  task->outputs_offset = -1;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
     task->inputs_buffer[i] = NULL;
