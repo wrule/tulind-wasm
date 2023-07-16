@@ -81,6 +81,31 @@ TI_REAL outputs_number(int task_index, int output_index, int offset) {
   return task_list[task_index].outputs[output_index][offset];
 }
 
+void link_task(int task_index) {
+  Task * task = &task_list[task_index];
+  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
+  int inputs_offset = 0;
+  for (int i = 0; i < indicator->inputs; ++i) {
+    MapInfo * info = &task->inputs_map[i];
+    if (info->enabled) {
+      Task * target = &task_list[info->target_index];
+      int offset = 0;
+      if (info->is_outputs) {
+        offset = target->outputs_offset;
+        task->inputs[i] = target->outputs[info->data_index];
+      } else {
+        offset = target->inputs_offset;
+        task->inputs[i] = target->inputs[info->data_index];
+      }
+      if (offset > inputs_offset) inputs_offset = offset;
+    }
+  }
+  task->inputs_offset = inputs_offset;
+  for (int i = 0; i < indicator->inputs; ++i) {
+    task->inputs_buffer[i] = &task->inputs[i][inputs_offset];
+  }
+}
+
 void run_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
