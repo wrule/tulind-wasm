@@ -71,10 +71,6 @@ void inputs_map(
   info->target_index = target_index;
   info->is_outputs = is_outputs;
   info->data_index = data_index;
-  if (task->inputs[input_index] != NULL) {
-    free(task->inputs[input_index]);
-    task->inputs[input_index] = NULL;
-  }
 }
 
 void options_number(int task_index, int x, TI_REAL number) {
