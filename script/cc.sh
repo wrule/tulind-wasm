@@ -4,10 +4,10 @@ emcc -O3 c/index.c c/tiamalgamation.c -o dist/tulind.js \
   -s EXPORT_NAME='Tulind' \
   -s EXPORTED_FUNCTIONS='[
     "_new_task",
-    "_free_task",
     "_inputs_number",
+    "_inputs_map",
     "_options_number",
-    "_outputs_offset",
     "_outputs_number",
+    "_link_task",
     "_run_task"
   ]'
