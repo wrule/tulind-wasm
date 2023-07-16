@@ -40,14 +40,27 @@ void init_task_list() {
 
 int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
+  if (task->used) free(next_task);
   task->indicator_index = indicator_index;
   task->size = size;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
+    task->inputs_map[i].enabled = ENABLED;
   }
   task->used = 1;
   return next_task++;
+}
+
+void free_task(int task_index) {
+  Task * task = &task_list[task_index];
+  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
+  for (int i = 0; i < indicator->inputs; ++i)
+    if (!task->inputs_map[i].enabled && task->inputs[i] != NULL)
+      free(task->inputs[i]);
+  for (int i = 0; i < indicator->outputs; ++i)
+    free(task->outputs[i]);
+  task->used = 0;
 }
 
 void inputs_number(
