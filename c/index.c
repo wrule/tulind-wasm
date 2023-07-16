@@ -6,6 +6,10 @@
 #define TASK_MAX 1000
 #define DATA_MAX 10
 #define INPUTS_MAP_WIDTH 5
+#define DISABLED 0
+#define ENABLED 1
+#define IS_OUTPUTS 0
+#define IS_INPUTS 1
 
 typedef struct {
   int indicator_index;
@@ -30,16 +34,13 @@ int new_task(int indicator_index, int size, int input_offset) {
   task_list[next_task].size_buffer = size - input_offset;
   task_list[next_task].inputs_offset = input_offset;
   task_list[next_task].outputs_offset = -1;
+  for (int i = 0; i < DATA_MAX; ++i)
+    task_list[next_task].inputs_map[i][0] = DISABLED;
   ti_indicator_info indicator = ti_indicators[indicator_index];
-  task_list[next_task].inputs = malloc(sizeof(TI_REAL *) * indicator.inputs);
-  task_list[next_task].inputs_buffer = malloc(sizeof(TI_REAL *) * indicator.inputs);
   for (int i = 0; i < indicator.inputs; ++i) {
     task_list[next_task].inputs[i] = malloc(sizeof(TI_REAL) * size);
     task_list[next_task].inputs_buffer[i] = &task_list[next_task].inputs[i][input_offset];
   }
-  task_list[next_task].options = malloc(sizeof(TI_REAL) * indicator.options);
-  task_list[next_task].outputs = malloc(sizeof(TI_REAL *) * indicator.outputs);
-  task_list[next_task].outputs_buffer = malloc(sizeof(TI_REAL *) * indicator.outputs);
   for (int i = 0; i < indicator.outputs; ++i) {
     task_list[next_task].outputs[i] = malloc(sizeof(TI_REAL) * size);
     task_list[next_task].outputs_buffer[i] = task_list[next_task].outputs[i];
