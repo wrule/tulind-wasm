@@ -13,8 +13,8 @@ typedef struct {
   int size_buffer;
   int inputs_offset;
   TI_REAL * inputs[DATA_MAX];
-  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
   TI_REAL * inputs_buffer[DATA_MAX];
+  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
   TI_REAL options[DATA_MAX];
   int outputs_offset;
   TI_REAL * outputs[DATA_MAX];
