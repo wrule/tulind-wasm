@@ -59,7 +59,8 @@ void enable_inputs_map(
   int is_outputs,
   int data_index
 ) {
-  MapInfo * info = &task_list[task_index].inputs_map[input_index];
+  Task * task = &task_list[task_index];
+  MapInfo * info = &task->inputs_map[input_index];
   info->enabled = ENABLED;
   info->target_index = target_index;
   info->is_outputs = is_outputs;
