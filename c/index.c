@@ -4,18 +4,21 @@
 #include "indicators.h"
 
 #define TASK_MAX 1000
+#define DATA_MAX 10
+#define INPUTS_MAP_WIDTH 5
 
 typedef struct {
   int indicator_index;
   int size;
   int size_buffer;
   int inputs_offset;
-  TI_REAL * * inputs;
-  TI_REAL * * inputs_buffer;
-  TI_REAL * options;
+  TI_REAL * inputs[DATA_MAX];
+  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
+  TI_REAL * inputs_buffer[DATA_MAX];
+  TI_REAL options[DATA_MAX];
   int outputs_offset;
-  TI_REAL * * outputs;
-  TI_REAL * * outputs_buffer;
+  TI_REAL * outputs[DATA_MAX];
+  TI_REAL * outputs_buffer[DATA_MAX];
 } Task;
 
 Task task_list[TASK_MAX];
