@@ -40,10 +40,7 @@ int new_task(int indicator_index, int size) {
   task->size = size;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
-    task->inputs_buffer[i] = NULL;
     task->outputs[i] = NULL;
-    task->outputs_buffer[i] = NULL;
-    task->inputs_map[i].enabled = DISABLED;
   }
   return next_task++;
 }
