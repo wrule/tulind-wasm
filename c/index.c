@@ -16,13 +16,13 @@ typedef struct {
   int size;
   int size_buffer;
   int inputs_offset;
+  int outputs_offset;
+  TI_REAL options[DATA_MAX];
   TI_REAL * inputs[DATA_MAX];
   TI_REAL * inputs_buffer[DATA_MAX];
-  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
-  TI_REAL options[DATA_MAX];
-  int outputs_offset;
   TI_REAL * outputs[DATA_MAX];
   TI_REAL * outputs_buffer[DATA_MAX];
+  int inputs_map[DATA_MAX][INPUTS_MAP_WIDTH];
 } Task;
 
 Task task_list[TASK_MAX];
