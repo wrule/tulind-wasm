@@ -3,7 +3,7 @@
 #include "candles.h"
 #include "indicators.h"
 
-#define TASK_MAX 1000
+#define TASK_MAX 100
 #define DATA_MAX 10
 #define INPUTS_MAP_WIDTH 5
 #define DISABLED 0
