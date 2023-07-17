@@ -49,6 +49,7 @@ void reset() {
   next_task = 0;
 }
 
+// 新建任务
 int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
   ti_indicator_info * indicator = &ti_indicators[indicator_index];
