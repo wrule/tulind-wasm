@@ -77,7 +77,9 @@ function run_alone(
   for (let output_index = 0; output_index < outputs_size; ++output_index) {
     outputs[output_index] = new Array<number>(size);
     for (let offset = 0; offset < size; ++offset)
-      outputs[output_index][offset] = tulind._outputs_number(task_index, output_index, offset);
+      outputs[output_index][offset] = offset >= outputs_offset ?
+        tulind._outputs_number(task_index, output_index, offset) :
+        NaN;
   }
   tulind._free_current();
   return outputs;
