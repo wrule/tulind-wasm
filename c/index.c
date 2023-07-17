@@ -3,7 +3,7 @@
 #include "candles.h"
 #include "indicators.h"
 
-#define TASK_MAX 100
+#define TASK_MAX 1000
 #define DATA_MAX 4
 
 typedef struct {
@@ -28,7 +28,7 @@ typedef struct {
 Task task_list[TASK_MAX];
 int next_task = 0;
 
-void init_task_list() {
+void _init_task_list() {
   for (int i = 0; i < TASK_MAX; ++i)
     task_list[i].used = 0;
 }
@@ -141,6 +141,6 @@ void run() {
 }
 
 int main() {
-  init_task_list();
+  _init_task_list();
   return 0;
 }
