@@ -152,6 +152,8 @@ void run(int start_index, int end_index) {
 
 // 主函数初始化
 int main() {
-  reset();
+  for (int i = 0; i < TASK_MAX; ++i)
+    task_list[i].used = 0;
+  next_task = 0;
   return 0;
 }
