@@ -56,8 +56,6 @@ int new_task(int indicator_index, int size) {
   task->used = 1;
   task->indicator_index = indicator_index;
   task->size = size;
-  task->inputs_offset = 0;
-  task->outputs_offset = 0;
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs_map[i].enabled = 1;
     task->options[i] = 2;
