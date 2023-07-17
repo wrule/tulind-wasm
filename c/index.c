@@ -70,6 +70,7 @@ int new_task(int indicator_index, int size) {
   return task_index;
 }
 
+// 编辑输入数据
 void inputs_number(
   int task_index,
   int input_index,
