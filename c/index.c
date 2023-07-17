@@ -53,6 +53,13 @@ void reset() {
   next_task = 0;
 }
 
+// 初始化模块
+void init() {
+  for (int i = 0; i < TASK_MAX; ++i)
+    task_list[i].used = 0;
+  next_task = 0;
+}
+
 // 新建任务
 int new_task(int indicator_index, int size) {
   if (first) init();
@@ -156,11 +163,4 @@ void run_task(int task_index) {
 void run(int start_index, int end_index) {
   for (int i = start_index; i <= end_index; ++i)
     run_task(i);
-}
-
-// 初始化模块
-void init() {
-  for (int i = 0; i < TASK_MAX; ++i)
-    task_list[i].used = 0;
-  next_task = 0;
 }
