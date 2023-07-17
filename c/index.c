@@ -113,14 +113,10 @@ void link_task(int task_index) {
     MapInfo * info = &task->inputs_map[i];
     if (info->enabled) {
       Task * target = &task_list[info->target_index];
-      int offset = 0;
-      if (info->is_outputs) {
-        offset = target->outputs_offset;
-        task->inputs[i] = target->outputs[info->data_index];
-      } else {
-        offset = target->inputs_offset;
-        task->inputs[i] = target->inputs[info->data_index];
-      }
+      const int offset = info->is_outputs ? target->outputs_offset :
+        target->inputs_offset;
+      task->inputs[i] = info->is_outputs ? target->outputs[info->data_index] :
+        target->inputs[info->data_index];
       if (offset > inputs_offset) inputs_offset = offset;
     }
   }
