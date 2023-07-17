@@ -58,39 +58,35 @@ interface Tulind_WASM {
 export
 function single_run(
   tulind: Tulind_WASM,
-  indicator: Indicator,
+  indicator_index: number,
   inputs: number[][],
   options: number[],
+  outputs_size: number,
 ) {
   const size = inputs[0].length;
-  const task_index = tulind._new_task(indicator.index, size);
+  const task_index = tulind._new_task(indicator_index, size);
   inputs.forEach((row, input_index) => row.forEach((num, offset) => {
     tulind._inputs_number(task_index, input_index, offset, num);
   }));
   options.forEach((num, offset) => tulind._options_number(task_index, offset, num));
+  
   tulind._run_task(task_index);
+  
+  const outputs = new Array<number[]>(outputs_size);
+  for (let index = 0; index < outputs_size; ++index) {
+    outputs[index] = new Array<number>(size);
+    for (let offset = 0; offset < size; ++offset)
+      outputs[index][offset] = tulind._outputs_number(task_index, index, offset);
+  }
   tulind._free_current();
+  return outputs;
 }
 
 async function main() {
   const tulind: Tulind_WASM = await Tulind();
   const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const task_index = tulind._new_task(72, source.length);
-  source.forEach((number, offset) => {
-    tulind._inputs_number(task_index, 0, offset, number);
-  });
-  tulind._options_number(task_index, 0, 2);
-  const b = tulind._new_task(72, source.length);
-  tulind._inputs_map(b, 0, task_index, 1, 0);
-  tulind._options_number(b, 0, 3);
-  tulind._run(0, 1);
-  source.forEach((_, offset) => {
-    console.log(tulind._outputs_number(task_index, 0, offset));
-  });
-  console.log('');
-  source.forEach((_, offset) => {
-    console.log(tulind._outputs_number(b, 0, offset));
-  });
+  const a = single_run(tulind, 72, [source], [2], 1);
+  console.log(a);
 }
 
 main();
