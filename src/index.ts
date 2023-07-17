@@ -72,6 +72,7 @@ function run_alone(
   });
   options.forEach((option, offset) => tulind._options_number(task_index, offset, option));
   tulind._run_task(task_index);
+  const outputs_offset = tulind._outputs_offset(task_index);
   const outputs = new Array<number[]>(outputs_size);
   for (let output_index = 0; output_index < outputs_size; ++output_index) {
     outputs[output_index] = new Array<number>(size);
