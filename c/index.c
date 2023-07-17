@@ -32,8 +32,7 @@ void free_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
   for (int i = 0; i < indicator->inputs; ++i)
-    if (!task->inputs_map[i].enabled && task->inputs[i] != NULL)
-      free(task->inputs[i]);
+    if (!task->inputs_map[i].enabled) free(task->inputs[i]);
   for (int i = 0; i < indicator->outputs; ++i)
     free(task->outputs[i]);
   task->used = 0;
