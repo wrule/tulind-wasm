@@ -28,6 +28,7 @@ typedef struct {
 Task task_list[TASK_MAX];
 int next_task = 0;
 
+// 释放任务
 void free_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
