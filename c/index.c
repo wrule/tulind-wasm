@@ -27,6 +27,7 @@ typedef struct {
 
 Task task_list[TASK_MAX];
 int next_task = 0;
+int first = 1;
 
 // 释放任务
 void free_task(int task_index) {
@@ -54,6 +55,8 @@ void reset() {
 
 // 新建任务
 int new_task(int indicator_index, int size) {
+  if (first) init();
+  first = 0;
   Task * task = &task_list[next_task];
   ti_indicator_info * indicator = &ti_indicators[indicator_index];
   if (task->used) free_task(next_task);
