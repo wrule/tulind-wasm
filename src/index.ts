@@ -77,7 +77,6 @@ function run_alone(
     for (let offset = 0; offset < size; ++offset)
       outputs[output_index][offset] = tulind._outputs_number(task_index, output_index, offset);
   }
-
   tulind._free_current();
   return outputs;
 }
