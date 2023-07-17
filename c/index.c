@@ -45,6 +45,7 @@ void free_current() {
   if (task_list[next_task].used) free_task(next_task);
 }
 
+// 释放并重置所有任务
 void reset() {
   for (int i = 0; i < TASK_MAX; ++i)
     if (task_list[i].used) free_task(i);
