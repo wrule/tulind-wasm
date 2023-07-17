@@ -17,12 +17,12 @@ typedef struct {
   int used;
   int indicator_index;
   int size;
-  int inputs_offset;
-  int outputs_offset;
-  MapInfo inputs_map[DATA_MAX];
   TI_REAL options[DATA_MAX];
+  int inputs_offset;
   TI_REAL * inputs[DATA_MAX];
+  int outputs_offset;
   TI_REAL * outputs[DATA_MAX];
+  MapInfo inputs_map[DATA_MAX];
 } Task;
 
 Task task_list[TASK_MAX];
