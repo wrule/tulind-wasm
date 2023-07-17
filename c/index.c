@@ -6,10 +6,6 @@
 #define TASK_MAX 100
 #define DATA_MAX 10
 #define INPUTS_MAP_WIDTH 5
-#define DISABLED 0
-#define ENABLED 1
-#define IS_OUTPUTS 0
-#define IS_INPUTS 1
 
 typedef struct {
   int enabled;
@@ -46,7 +42,7 @@ int new_task(int indicator_index, int size) {
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs[i] = NULL;
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
-    task->inputs_map[i].enabled = ENABLED;
+    task->inputs_map[i].enabled = 1;
   }
   task->used = 1;
   return next_task++;
@@ -73,7 +69,7 @@ void inputs_number(
   if (task->inputs[input_index] == NULL)
     task->inputs[input_index] = malloc(sizeof(TI_REAL) * task->size);
   task->inputs[input_index][offset] = number;
-  task->inputs_map[input_index].enabled = DISABLED;
+  task->inputs_map[input_index].enabled = 0;
 }
 
 void inputs_map(
@@ -84,7 +80,7 @@ void inputs_map(
   int data_index
 ) {
   MapInfo * info = &task_list[task_index].inputs_map[input_index];
-  info->enabled = ENABLED;
+  info->enabled = 1;
   info->target_index = target_index;
   info->is_outputs = is_outputs;
   info->data_index = data_index;
