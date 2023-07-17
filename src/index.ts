@@ -15,7 +15,7 @@ interface Indicator {
   output_names: string[];
 }
 export
-interface Tulind_WASM {
+interface TulindWASM {
   _free_task: (task_index: number) => void;
   _free_current: () => void;
   _reset: () => void;
@@ -58,7 +58,7 @@ interface Tulind_WASM {
 
 export
 function run_alone(
-  tulind: Tulind_WASM,
+  tulind: TulindWASM,
   indicator_index: number,
   inputs: number[][],
   options: number[],
@@ -86,7 +86,7 @@ function run_alone(
 }
 
 async function main() {
-  const tulind: Tulind_WASM = await Tulind();
+  const tulind: TulindWASM = await Tulind();
   console.log(1);
   const source = Array(100000 * 30).fill(0).map(() => Math.random() * 1000);
   console.log(2);
