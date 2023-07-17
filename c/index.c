@@ -144,10 +144,9 @@ void run_task(int task_index) {
   );
 }
 
-void run() {
-  for (int i = 0; i < next_task; ++i) {
+void run(int start_index, int end_index) {
+  for (int i = start_index; i <= end_index; ++i)
     run_task(i);
-  }
 }
 
 int main() {
