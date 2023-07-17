@@ -39,6 +39,7 @@ void free_task(int task_index) {
   task->used = 0;
 }
 
+// 释放当前任务并回退
 void free_current() {
   if (--next_task < 0) next_task = TASK_MAX - 1;
   if (task_list[next_task].used) free_task(next_task);
