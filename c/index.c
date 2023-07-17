@@ -100,6 +100,7 @@ void options_number(int task_index, int offset, TI_REAL number) {
   task_list[task_index].options[offset] = number;
 }
 
+// 获取输出数据
 TI_REAL outputs_number(int task_index, int output_index, int offset) {
   return task_list[task_index].outputs[output_index][offset];
 }
