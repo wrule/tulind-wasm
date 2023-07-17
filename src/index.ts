@@ -85,14 +85,14 @@ function run_alone(
 async function main() {
   const tulind: TulindWASM = await Tulind();
   console.log(1);
-  const source = Array(100000 * 30).fill(0).map(() => Math.random() * 1000);
+  const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   console.log(2);
   const old_time = Date.now();
-  const result = run_alone(tulind, 72, [source], [21], 1);
+  const result = run_alone(tulind, 72, [source], [3], 1);
   // const result = t.sma(source, 21);
   console.log(Date.now() - old_time);
   console.log(3);
-  console.log(result.length);
+  console.log(result);
 }
 
 main();
