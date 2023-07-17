@@ -1,6 +1,19 @@
 const Tulind = require('./tulind.js');
 
 export
+interface Indicator {
+  index: number;
+  name: string;
+  full_name: string;
+  type: number;
+  inputs: number;
+  options: number;
+  outputs: number;
+  input_names: string[];
+  option_names: string[];
+  output_names: string[];
+}
+export
 interface Tulind_WASM {
   _free_task: (task_index: number) => void;
   _free_current: () => void;
@@ -45,12 +58,12 @@ interface Tulind_WASM {
 export
 function single_run(
   tulind: Tulind_WASM,
-  indicator_index: number,
+  indicator: Indicator,
   inputs: number[][],
   options: number[],
 ) {
   const size = inputs[0].length;
-  const task_index = tulind._new_task(indicator_index, size);
+  const task_index = tulind._new_task(indicator.index, size);
   inputs.forEach((row, input_index) => row.forEach((num, offset) => {
     tulind._inputs_number(task_index, input_index, offset, num);
   }));
