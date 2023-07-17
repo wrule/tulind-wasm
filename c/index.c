@@ -95,6 +95,7 @@ void inputs_map(
   info->data_index = data_index;
 }
 
+// 编辑参数数据
 void options_number(int task_index, int offset, TI_REAL number) {
   task_list[task_index].options[offset] = number;
 }
