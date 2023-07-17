@@ -47,7 +47,7 @@ void free_current() {
 
 void reset() {
   for (int i = 0; i < TASK_MAX; ++i)
-    if (task_list[i].used) free(i);
+    if (task_list[i].used) free_task(i);
   next_task = 0;
 }
 
