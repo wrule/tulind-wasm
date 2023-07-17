@@ -80,6 +80,7 @@ void inputs_number(
   task->inputs_map[input_index].enabled = 0;
 }
 
+// 编辑输入映射
 void inputs_map(
   int task_index,
   int input_index,
