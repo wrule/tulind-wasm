@@ -81,6 +81,7 @@ function run_alone(
         tulind._outputs_number(task_index, output_index, offset) :
         NaN;
   }
+  outputs.push([outputs_offset]);
   tulind._free_current();
   return outputs;
 }
@@ -91,7 +92,7 @@ async function main() {
   const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   console.log(2);
   const old_time = Date.now();
-  const result = run_alone(tulind, 72, [source], [3], 1);
+  const result = run_alone(tulind, 72, [source], [4], 1);
   // const result = t.sma(source, 21);
   console.log(Date.now() - old_time);
   console.log(3);
