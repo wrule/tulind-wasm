@@ -57,7 +57,7 @@ interface Tulind_WASM {
 }
 
 export
-function single_run(
+function run_alone(
   tulind: Tulind_WASM,
   indicator_index: number,
   inputs: number[][],
@@ -91,7 +91,7 @@ async function main() {
   const source = Array(100000 * 30).fill(0).map(() => Math.random() * 1000);
   console.log(2);
   const old_time = Date.now();
-  const result = single_run(tulind, 72, [source], [21], 1);
+  const result = run_alone(tulind, 72, [source], [21], 1);
   // const result = t.sma(source, 21);
   console.log(Date.now() - old_time);
   console.log(3);
