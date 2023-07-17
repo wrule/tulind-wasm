@@ -105,6 +105,7 @@ TI_REAL outputs_number(int task_index, int output_index, int offset) {
   return task_list[task_index].outputs[output_index][offset];
 }
 
+// 链接任务
 void link_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
