@@ -59,8 +59,6 @@ int new_task(int indicator_index, int size) {
   for (int i = 0; i < DATA_MAX; ++i) {
     task->inputs_map[i].enabled = 1;
     task->options[i] = 2;
-    task->inputs[i] = NULL;
-    task->outputs[i] = NULL;
   }
   for (int i = 0; i < indicator->outputs; ++i)
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
