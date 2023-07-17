@@ -2,6 +2,10 @@ const Tulind = require('./tulind.js');
 
 export
 interface Tulind_WASM {
+  _free_task: (task_index: number) => void;
+  _free_current: () => void;
+  _reset: () => void;
+  _init: () => void;
   _new_task: (indicator_index: number, size: number) => number;
   _inputs_number: (
     task_index: number,
@@ -25,10 +29,17 @@ interface Tulind_WASM {
     task_index: number,
     output_index: number,
     offset: number,
-  ) => void;
+  ) => number;
+  _get_inputs_number: (
+    task_index: number,
+    input_index: number,
+    offset: number,
+  ) => number;
+  _inputs_offset: (task_index: number) => number;
+  _outputs_offset: (task_index: number) => number;
   _link_task: (task_index: number) => void,
   _run_task: (task_index: number) => void,
-  _run: () => void,
+  _run: (start_index: number, end_index: number) => void,
 }
 
 async function main() {
