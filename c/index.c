@@ -4,8 +4,7 @@
 #include "indicators.h"
 
 #define TASK_MAX 100
-#define DATA_MAX 10
-#define INPUTS_MAP_WIDTH 5
+#define DATA_MAX 4
 
 typedef struct {
   int enabled;
