@@ -56,7 +56,7 @@ int new_task(int indicator_index, int size) {
   task->indicator_index = indicator_index;
   task->size = size;
   for (int i = 0; i < indicator->outputs; ++i)
-    task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
+    task->outputs[i] = malloc(sizeof(TI_REAL) * size);
   task->used = 1;
   int task_index = next_task;
   if (++next_task >= TASK_MAX) next_task = 0;
