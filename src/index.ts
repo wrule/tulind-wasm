@@ -53,7 +53,7 @@ async function main() {
   const b = tulind._new_task(72, source.length);
   tulind._inputs_map(b, 0, task_index, 1, 0);
   tulind._options_number(b, 0, 3);
-  tulind._run();
+  tulind._run(0, 1);
   source.forEach((_, offset) => {
     console.log(tulind._outputs_number(task_index, 0, offset));
   });
