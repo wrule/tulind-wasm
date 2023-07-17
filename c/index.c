@@ -28,11 +28,6 @@ typedef struct {
 Task task_list[TASK_MAX];
 int next_task = 0;
 
-void _init_task_list() {
-  for (int i = 0; i < TASK_MAX; ++i)
-    task_list[i].used = 0;
-}
-
 void free_task(int task_index) {
   Task * task = &task_list[task_index];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
@@ -42,6 +37,12 @@ void free_task(int task_index) {
   for (int i = 0; i < indicator->outputs; ++i)
     free(task->outputs[i]);
   task->used = 0;
+}
+
+void reset() {
+  for (int i = 0; i < TASK_MAX; ++i)
+    if (task_list[i].used) free(i);
+  next_task = 0;
 }
 
 int new_task(int indicator_index, int size) {
@@ -143,6 +144,6 @@ void run() {
 }
 
 int main() {
-  _init_task_list();
+  reset();
   return 0;
 }
