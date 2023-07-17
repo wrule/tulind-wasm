@@ -17,11 +17,11 @@ typedef struct {
   int used;
   int indicator_index;
   int size;
-  TI_REAL options[DATA_MAX];
-  MapInfo inputs_map[DATA_MAX];
   int inputs_offset;
-  TI_REAL * inputs[DATA_MAX];
   int outputs_offset;
+  MapInfo inputs_map[DATA_MAX];
+  TI_REAL options[DATA_MAX];
+  TI_REAL * inputs[DATA_MAX];
   TI_REAL * outputs[DATA_MAX];
 } Task;
 
@@ -53,15 +53,18 @@ int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
   ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
   if (task->used) free_task(next_task);
+  task->used = 1;
   task->indicator_index = indicator_index;
   task->size = size;
+  task->inputs_offset = 0;
+  task->outputs_offset = 0;
   for (int i = 0; i < DATA_MAX; ++i) {
-    task->inputs[i] = NULL;
+    task->options[i] = 2;
     task->inputs_map[i].enabled = 1;
+    task->inputs[i] = NULL;
   }
   for (int i = 0; i < indicator->outputs; ++i)
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
-  task->used = 1;
   return next_task++;
 }
 
