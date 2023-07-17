@@ -42,6 +42,23 @@ interface Tulind_WASM {
   _run: (start_index: number, end_index: number) => void,
 }
 
+export
+function single_run(
+  tulind: Tulind_WASM,
+  indicator_index: number,
+  inputs: number[][],
+  options: number[],
+) {
+  const size = inputs[0].length;
+  const task_index = tulind._new_task(indicator_index, size);
+  inputs.forEach((row, input_index) => row.forEach((num, offset) => {
+    tulind._inputs_number(task_index, input_index, offset, num);
+  }));
+  options.forEach((num, offset) => tulind._options_number(task_index, offset, num));
+  tulind._run_task(task_index);
+  tulind._free_current();
+}
+
 async function main() {
   const tulind: Tulind_WASM = await Tulind();
   const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
