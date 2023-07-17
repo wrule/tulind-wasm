@@ -150,6 +150,7 @@ void run(int start_index, int end_index) {
     run_task(i);
 }
 
+// 主函数初始化
 int main() {
   reset();
   return 0;
