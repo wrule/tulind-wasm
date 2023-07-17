@@ -1,3 +1,4 @@
+import { t } from 'litebot';
 const Tulind = require('./tulind.js');
 
 export
@@ -65,7 +66,7 @@ function single_run(
 ) {
   const size = inputs[0].length;
   const task_index = tulind._new_task(indicator_index, size);
-  
+
   inputs.forEach((row, input_index) => row.forEach((num, offset) => {
     tulind._inputs_number(task_index, input_index, offset, num);
   }));
@@ -86,9 +87,15 @@ function single_run(
 
 async function main() {
   const tulind: Tulind_WASM = await Tulind();
-  const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const result = single_run(tulind, 72, [source], [2], 1);
-  console.log(result);
+  console.log(1);
+  const source = Array(100000 * 30).fill(0).map(() => Math.random() * 1000);
+  console.log(2);
+  const old_time = Date.now();
+  const result = single_run(tulind, 72, [source], [21], 1);
+  // const result = t.sma(source, 21);
+  console.log(Date.now() - old_time);
+  console.log(3);
+  console.log(result.length);
 }
 
 main();

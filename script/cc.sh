@@ -2,6 +2,7 @@
 emcc -O3 c/index.c c/tiamalgamation.c -o dist/tulind.js \
   -s MODULARIZE=1 \
   -s EXPORT_NAME='Tulind' \
+  -s ALLOW_MEMORY_GROWTH=1 \
   -s EXPORTED_FUNCTIONS='[
     "_free_task",
     "_free_current",
