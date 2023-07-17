@@ -56,9 +56,6 @@ int new_task(int indicator_index, int size) {
   task->used = 1;
   task->indicator_index = indicator_index;
   task->size = size;
-  for (int i = 0; i < DATA_MAX; ++i) {
-    task->inputs_map[i].enabled = 1;
-  }
   for (int i = 0; i < indicator->outputs; ++i)
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
   return next_task++;
