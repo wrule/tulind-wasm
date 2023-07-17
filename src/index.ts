@@ -71,13 +71,13 @@ function run_alone(
   ));
   options.forEach((option, offset) => tulind._options_number(task_index, offset, option));
   tulind._run_task(task_index);
-
   const outputs = new Array<number[]>(outputs_size);
-  for (let index = 0; index < outputs_size; ++index) {
-    outputs[index] = new Array<number>(size);
+  for (let output_index = 0; output_index < outputs_size; ++output_index) {
+    outputs[output_index] = new Array<number>(size);
     for (let offset = 0; offset < size; ++offset)
-      outputs[index][offset] = tulind._outputs_number(task_index, index, offset);
+      outputs[output_index][offset] = tulind._outputs_number(task_index, output_index, offset);
   }
+
   tulind._free_current();
   return outputs;
 }
