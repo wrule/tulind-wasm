@@ -51,14 +51,16 @@ void reset() {
 
 int new_task(int indicator_index, int size) {
   Task * task = &task_list[next_task];
-  ti_indicator_info * indicator = &ti_indicators[task->indicator_index];
+  ti_indicator_info * indicator = &ti_indicators[indicator_index];
   if (task->used) free_task(next_task);
   task->indicator_index = indicator_index;
   task->size = size;
   for (int i = 0; i < indicator->outputs; ++i)
     task->outputs[i] = malloc(sizeof(TI_REAL) * task->size);
   task->used = 1;
-  return next_task++;
+  int task_index = next_task;
+  if (++next_task >= TASK_MAX) next_task = 0;
+  return task_index;
 }
 
 void inputs_number(
