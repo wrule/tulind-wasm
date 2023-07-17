@@ -39,6 +39,10 @@ void free_task(int task_index) {
   task->used = 0;
 }
 
+void free_current() {
+  if (task_list[next_task].used) free_task(next_task);
+}
+
 void reset() {
   for (int i = 0; i < TASK_MAX; ++i)
     if (task_list[i].used) free(i);
