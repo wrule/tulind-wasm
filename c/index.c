@@ -120,6 +120,16 @@ TI_REAL outputs_number(int task_index, int output_index, int offset) {
   return task_list[task_index].outputs[output_index][offset];
 }
 
+// 获取输入偏移
+int inputs_offset(int task_index) {
+  return task_list[task_index].inputs_offset;
+}
+
+// 获取输出偏移
+int outputs_offset(int task_index) {
+  return task_list[task_index].outputs_offset;
+}
+
 // 链接任务
 void link_task(int task_index) {
   Task * task = &task_list[task_index];
