@@ -120,6 +120,11 @@ TI_REAL outputs_number(int task_index, int output_index, int offset) {
   return task_list[task_index].outputs[output_index][offset];
 }
 
+// 获取输入数据
+TI_REAL get_inputs_number(int task_index, int input_index, int offset) {
+  return task_list[task_index].inputs[input_index][offset];
+}
+
 // 获取输入偏移
 int inputs_offset(int task_index) {
   return task_list[task_index].inputs_offset;
