@@ -5,11 +5,11 @@ class Code {
   public constructor(private readonly ind: Indicator) { }
 
   private get options() {
-    return this.ind.option_names.length > 1;
+    return this.ind.options > 1;
   }
 
-  private optionName(name: string) {
-    return this.options ? `options.${name}` : name;
+  private get outputs() {
+    return this.ind.outputs > 1;
   }
 
   private names(list: string[], type: 'number' | 'options' | 'outputs' | '' = 'number') {
@@ -41,6 +41,7 @@ function ${this.ind.name}(${this.argsCode}) {
   }], [${
     this.names(this.ind.option_names, this.options ? 'options' : '')
   }], ${this.ind.outputs});
+  return ${this.outputs ? `{ ${this.names(this.ind.output_names, 'outputs')} }` : 'outputs[0]'};
 }
     `.trim();
   }
