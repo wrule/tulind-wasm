@@ -119,7 +119,7 @@ function ${indicator.name}(${indicator_params_code(indicator)}${
 
 
 async function main() {
-  const a: any = tjson[48];
+  const a: any = tjson[72];
   a.index = 48;
   console.log(a);
   const code = new Code(a);

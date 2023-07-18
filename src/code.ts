@@ -22,7 +22,7 @@ class Code {
 
   private get argsCode() {
     const inputs = this.names(this.ind.input_names);
-    const options = this.ind.options ?
+    const options = this.options ?
       `options: { ${this.names(this.ind.option_names)} }` :
       this.names(this.ind.option_names);
     return [inputs, options].filter((item) => item).join(', ');
@@ -35,7 +35,11 @@ class Code {
  */
 export
 function ${this.ind.name}(${this.argsCode}) {
-  const outputs = run_alone(tulind, ${this.ind.index}, [${this.ind.input_names.map((name) => name).join(', ')}]);
+  const outputs = run_alone(tulind, ${this.ind.index}, [${
+    this.names(this.ind.input_names, '')
+  }], [${
+    this.names(this.ind.option_names, this.options ? 'options' : '')
+  }], ${this.ind.outputs});
 }
     `.trim();
   }
