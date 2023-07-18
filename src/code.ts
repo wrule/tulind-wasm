@@ -12,9 +12,10 @@ class Code {
     return this.ind.outputs > 1;
   }
 
-  private names(list: string[], type: 'number' | 'options' | 'outputs' | '' = 'number') {
+  private names(list: string[], type: 'number' | 'number[]' | 'options' | 'outputs' | '' = 'number') {
     return list.map((name, index) => {
       if (type === 'number') return `${name}: number`;
+      if (type === 'number[]') return `${name}: number[]`;
       if (type === 'options') return `options.${name}`;
       if (type === 'outputs') return `${name}: outputs[${index}]`;
       return name;
@@ -22,7 +23,7 @@ class Code {
   }
 
   private get argsCode() {
-    const inputs = this.names(this.ind.input_names);
+    const inputs = this.names(this.ind.input_names, 'number[]');
     const options = this.options ?
       `options: { ${this.names(this.ind.option_names)} }` :
       this.names(this.ind.option_names);
