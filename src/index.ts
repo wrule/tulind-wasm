@@ -1,5 +1,6 @@
 import { t } from 'litebot';
 import tjson from './1.json';
+import { Code } from './code';
 const Tulind = require('./tulind.js');
 
 export
@@ -118,8 +119,10 @@ function ${indicator.name}(${indicator_params_code(indicator)}${
 
 
 async function main() {
-  console.log(tjson[72]);
-  console.log(indicator_code(tjson[72] as any));
+  const a = tjson[48];
+  console.log(a);
+  const code = new Code(a as any);
+  console.log(code.Code());
   return;
   const tulind: TulindWASM = await Tulind();
   console.log(1);
