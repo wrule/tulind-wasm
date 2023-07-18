@@ -119,9 +119,10 @@ function ${indicator.name}(${indicator_params_code(indicator)}${
 
 
 async function main() {
-  const a = tjson[48];
+  const a: any = tjson[48];
+  a.index = 48;
   console.log(a);
-  const code = new Code(a as any);
+  const code = new Code(a);
   console.log(code.Code());
   return;
   const tulind: TulindWASM = await Tulind();

@@ -26,8 +26,8 @@ class Code {
  * ${this.ind.full_name}
  */
 export
-function ${this.ind.name}(${this.arguments}) {
-
+function ${this.ind.name}(${this.argsCode}) {
+  const outputs = run_alone(tulind, ${this.ind.index}, [${this.ind.input_names.map((name) => name).join(', ')}]);
 }
     `.trim();
   }
