@@ -16,12 +16,12 @@ void print_string_list(const char * const list[TI_MAXINDPARAMS], int size) {
 
 int main() {
   const ti_indicator_info * info = ti_indicators;
-  int first = 1;
+  int index = 0;
   printf("[\n");
   while (info->name != 0) {
-    if (first == 0) printf(",\n");
-    first = 0;
+    if (index != 0) printf(",\n");
     printf("\t{\n");
+    printf("\t\t\"index\": %d,\n", index);
     printf("\t\t\"name\": \"%s\",\n", info->name);
     printf("\t\t\"full_name\": \"%s\",\n", info->full_name);
     printf("\t\t\"type\": %d,\n", info->type);
@@ -38,6 +38,7 @@ int main() {
     print_string_list(info->output_names, info->outputs);
     printf("\n");
     printf("\t}");
+    ++index;
     ++info;
   }
   printf("\n]\n");
