@@ -21,10 +21,10 @@ class Code {
   }
 
   private get argsCode() {
-    const inputs = this.ind.input_names.map((name) => `${name}: number`).join(', ');
+    const inputs = this.names(this.ind.input_names);
     const options = this.ind.options ?
-      `options: { ${this.ind.option_names.map((name) => `${name}: number`).join(', ')} }` :
-      this.ind.option_names.map((name) => `${name}: number`).join(', ');
+      `options: { ${this.names(this.ind.option_names)} }` :
+      this.names(this.ind.option_names);
     return [inputs, options].filter((item) => item).join(', ');
   }
 
