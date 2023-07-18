@@ -8,8 +8,16 @@ class Code {
     return this.ind.option_names.length > 1;
   }
 
-  private option_name(name: string) {
+  private optionName(name: string) {
     return this.options ? `options.${name}` : name;
+  }
+
+  private get argsCode() {
+    const inputs = this.ind.input_names.map((name) => `${name}: number`).join(', ');
+    const options = this.ind.options ?
+      `options: { ${this.ind.option_names.map((name) => `${name}: number`).join(', ')} }` :
+      this.ind.option_names.map((name) => `${name}: number`).join(', ');
+    return [inputs, options].filter((item) => item).join(', ');
   }
 
   public Code() {
@@ -18,7 +26,7 @@ class Code {
  * ${this.ind.full_name}
  */
 export
-function ${this.ind.name}(''}) {
+function ${this.ind.name}(${this.arguments}) {
 
 }
     `.trim();
