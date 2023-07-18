@@ -122,7 +122,7 @@ async function main() {
   const a = tjson[48];
   console.log(a);
   const code = new Code(a as any);
-  console.log(code.Code());
+  // console.log(code.Code());
   return;
   const tulind: TulindWASM = await Tulind();
   console.log(1);
