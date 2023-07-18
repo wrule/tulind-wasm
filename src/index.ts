@@ -86,6 +86,22 @@ function run_alone(
   return outputs;
 }
 
+/**
+ * 你好，世界
+ */
+export
+function indicator_code(indicator: Indicator) {
+  return `
+/**
+ * ${indicator.full_name}
+ */
+export
+function ${indicator.name}() {
+  const outputs = run_alone(tulind, )
+}`.trim();
+}
+
+
 async function main() {
   const tulind: TulindWASM = await Tulind();
   console.log(1);
