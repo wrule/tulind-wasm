@@ -1,4 +1,5 @@
 import { t } from 'litebot';
+import tjson from './1.json';
 const Tulind = require('./tulind.js');
 
 export
@@ -86,6 +87,18 @@ function run_alone(
   return outputs;
 }
 
+export
+function indicator_params_code(indicator: Indicator) {
+  return indicator.input_names.map((name) => `${name}: number`).join(', ');
+}
+
+export
+function indicator_options_code(indicator: Indicator) {
+  if (indicator.options < 1) return '';
+  if (indicator.options === 1) return `${indicator.option_names[0]}: number`;
+  return `options: { ${indicator.option_names.map((name) => `${name}: number`).join(', ')} }`;
+}
+
 /**
  * 你好，世界
  */
@@ -96,13 +109,18 @@ function indicator_code(indicator: Indicator) {
  * ${indicator.full_name}
  */
 export
-function ${indicator.name}() {
+function ${indicator.name}(${indicator_params_code(indicator)}${
+  indicator_options_code(indicator) ? `, ${indicator_options_code(indicator)}` : ''
+}) {
   const outputs = run_alone(tulind, )
 }`.trim();
 }
 
 
 async function main() {
+  console.log(tjson[72]);
+  console.log(indicator_code(tjson[72] as any));
+  return;
   const tulind: TulindWASM = await Tulind();
   console.log(1);
   const source = Array(10000000).fill(0).map(() => Math.random() * 1000);
