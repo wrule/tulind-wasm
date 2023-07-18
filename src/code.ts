@@ -12,10 +12,11 @@ class Code {
     return this.options ? `options.${name}` : name;
   }
 
-  private names(list: string[], type: 'number' | 'options' | '' = 'number') {
-    return list.map((name) => {
+  private names(list: string[], type: 'number' | 'options' | 'outputs' | '' = 'number') {
+    return list.map((name, index) => {
       if (type === 'number') return `${name}: number`;
       if (type === 'options') return `options.${name}`;
+      if (type === 'outputs') return `${name}: outputs[${index}]`;
       return name;
     }).join(', ');
   }
