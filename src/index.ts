@@ -121,6 +121,7 @@ function ${indicator.name}(${indicator_params_code(indicator)}${
 async function main() {
   tlist.forEach((ind) => {
     console.log(new Code(ind).Code());
+    console.log();
   });
   return;
   const tulind: TulindWASM = await Tulind();
