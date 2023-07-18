@@ -41,7 +41,10 @@ function ${this.ind.name}(${this.argsCode}) {
   }], [${
     this.names(this.ind.option_names, this.options ? 'options' : '')
   }], ${this.ind.outputs});
-  return ${this.outputs ? `{ ${this.names(this.ind.output_names, 'outputs')} }` : 'outputs[0]'};
+  return ${this.outputs ?
+    `{ ${this.names(this.ind.output_names, 'outputs')} }` :
+    'outputs[0]'
+  };
 }
     `.trim();
   }
