@@ -119,21 +119,24 @@ function ${indicator.name}(${indicator_params_code(indicator)}${
 
 
 async function main() {
-  tlist.forEach((ind) => {
-    console.log(new Code(ind).Code());
-    console.log();
-  });
+  // tlist.forEach((ind) => {
+  //   console.log(new Code(ind).Code());
+  //   console.log();
+  // });
+  // return;
+  console.log(Tulind);
+  // const tulind: TulindWASM = await Tulind();
+  // console.log(tulind);
   return;
-  const tulind: TulindWASM = await Tulind();
-  console.log(1);
-  const source = Array(10000000).fill(0).map(() => Math.random() * 1000);
-  console.log(2);
-  const old_time = Date.now();
-  const result = run_alone(tulind, 72, [source], [4], 1);
-  // const result = t.sma(source, 21);
-  console.log(Date.now() - old_time);
-  console.log(3);
-  // console.log(result);
+  // console.log(1);
+  // const source = Array(10000000).fill(0).map(() => Math.random() * 1000);
+  // console.log(2);
+  // const old_time = Date.now();
+  // const result = run_alone(tulind, 72, [source], [4], 1);
+  // // const result = t.sma(source, 21);
+  // console.log(Date.now() - old_time);
+  // console.log(3);
+  // // console.log(result);
 }
 
 main();
